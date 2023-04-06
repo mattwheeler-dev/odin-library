@@ -1,6 +1,12 @@
 /* GOOGLE FONT IMPORT [POPPINS] */
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400&display=swap");
 
+/* VARIABLES */
+:root {
+	--border: 2px solid #ff0090;
+	--radius: 15px;
+}
+
 /* DEFAULTS */
 * {
 	margin: 0;
@@ -10,7 +16,139 @@
 }
 
 body {
-	height: 100vh;
+	height: fit-content;
 	width: 100vw;
+	color: #fff;
+	background-color: #303030;
 	overflow-x: hidden;
+}
+
+/* HEADER */
+header {
+	height: 4rem;
+	text-align: center;
+	padding-top: 0.4rem;
+	border-bottom: var(--border);
+}
+
+/* MAIN */
+main {
+	width: 100%;
+	margin: 2rem auto;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+/* ADD BOOK SECTION */
+#add-book {
+	height: 4rem;
+	width: 80%;
+	font-weight: 300;
+	display: flex;
+	align-items: center;
+	justify-content: space-evenly;
+}
+
+input[type="text"],
+select,
+input[type="submit"],
+button {
+	background-color: transparent;
+	border: var(--border);
+	border-radius: var(--radius);
+}
+
+input[type="text"],
+select,
+button {
+	height: 1.75rem;
+	color: #fff;
+}
+
+input[type="text"]:focus,
+select:focus {
+	outline: 1px solid #ff0090;
+	background-color: #000;
+}
+
+input[type="text"] {
+	padding-left: 1rem;
+}
+
+input::placeholder {
+	color: #fff;
+	font-weight: 200;
+}
+
+select {
+	width: 7rem;
+}
+
+option {
+	text-align: center;
+}
+
+input[type="submit"],
+button {
+	cursor: pointer;
+	margin-top: 1rem;
+	padding: 0.25rem 1rem;
+	font-size: 0.9rem;
+	color: #ff0090;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	transition: all 0.25s linear;
+}
+
+input[type="submit"]:hover,
+button:hover {
+	background-color: #000;
+	box-shadow: 0 0 0.75rem #ff0090;
+}
+
+input[type="submit"]:active {
+	transform: scale(0.9);
+}
+
+/* LIST BOOKS SECTION */
+#list-books {
+	height: fit-content;
+	width: 90%;
+	margin-top: 4rem;
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: space-evenly;
+}
+
+.book-card {
+	height: 20rem;
+	width: 31%;
+	margin: 1rem 0;
+	padding: 0 0.75rem;
+	border: var(--border);
+	border-radius: var(--radius);
+	box-shadow: 0 0 0.5rem #000;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-evenly;
+}
+
+p {
+	font-weight: 400;
+}
+
+span {
+	font-weight: 200;
+}
+
+button {
+	width: 60%;
+	margin: 0 auto;
+}
+
+.dlt {
+	display: none;
 }
